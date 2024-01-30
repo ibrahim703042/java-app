@@ -1,3 +1,5 @@
 com\kwizera\ibrahim\java\app\resources\JakartaEE91Resource.class
 com\kwizera\ibrahim\java\app\JakartaRestConfiguration.class
-com\kwizera\ibrahim\main\Main.class
+com\kwizera\ibrahim\java\app\main\Main.class
+com\kwizera\ibrahim\java\app\persistence\CustomPersistenceUnitInfo.class
+com\kwizera\ibrahim\entities\Province.class
