@@ -4,14 +4,16 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
     
     <!-- Define Persistence Unit -->
-    <persistence-unit name="jpa-hibernate-mysql">
+    <persistence-unit name="my-persistence-unit" transaction-type="RESOURCE_LOCAL">
+        <description>Description</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="jakarta.persistence.jdbc.url"    value="jdbc:mysql://localhost:3306/hibernate_examples" />
+            <property name="jakarta.persistence.jdbc.url"    value="jdbc:mysql://localhost:3307/impot_sur_revenus_locatif" />
             <property name="jakarta.persistence.jdbc.user"   value="root" />
-            <!--<property name="jakarta.persistence.jdbc.password" value="Password@<1994>" />-->
-            <property name="jakarta.persistence.jdbc.password" value="Password@1994" />
-            <property name="jakarta.persistence.schema-generation.database.action" value="create" />
+            <property name="jakarta.persistence.jdbc.password" value="Password@&lt;1994&gt;" />
+            <property name="jakarta.persistence.schema-generation.database.action" value="update" />
             <property name="hibernate.dialect"    value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql"   value="true" />
             <property name="hibernate.format_sql" value="true" />
